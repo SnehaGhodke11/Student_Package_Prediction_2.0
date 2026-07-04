@@ -1,7 +1,7 @@
-NumPy==2.4.6
+NumPy==
 
-Pandas==3.0.3
+Pandas==
 
-Streamlit==1.58.0
+Streamlit==
 
-Scikit-learn==1.9.0
+Scikit-learn==
