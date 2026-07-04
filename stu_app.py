@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-pipe = pickle.load(open("Stud.pkl", "rb"))
+pipe = pickle.load(open("Stud.pkl", 'rb'))
 
 st.title("🎓 Student Placement Prediction")
 
