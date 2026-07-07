@@ -33,9 +33,14 @@ if st.button("Predict Placement Status"):
         "PlacementTraining": [training]
     })
 
-    prediction = pipe.predict(input_df)[0]
-    probability = pipe.predict_proba(input_df)[0]
+   prediction = pipe.predict(input_df)[0]
 
+
+if hasattr(pipe.named_steps['model'], "predict_proba"):
+    probability = pipe.predict_proba(input_df)[0]
     st.success(f"Prediction: {prediction}")
     st.write(f"Confidence: {max(probability)*100:.2f}%")
-    st.write(type(pipe.named_steps['model']))
+else:
+    st.success(f"Prediction: {prediction}")
+    st.write("Confidence score not available for this model.")
+
