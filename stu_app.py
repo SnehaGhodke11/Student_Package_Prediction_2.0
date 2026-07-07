@@ -33,9 +33,8 @@ if st.button("Predict Placement Status"):
         "PlacementTraining": [training]
     })
 
-   prediction = pipe.predict(input_df)[0]
 
-
+prediction = pipe.predict(input_df)[0]
 if hasattr(pipe.named_steps['model'], "predict_proba"):
     probability = pipe.predict_proba(input_df)[0]
     st.success(f"Prediction: {prediction}")
