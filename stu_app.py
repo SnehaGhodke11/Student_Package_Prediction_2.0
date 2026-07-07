@@ -38,3 +38,4 @@ if st.button("Predict Placement Status"):
 
     st.success(f"Prediction: {prediction}")
     st.write(f"Confidence: {max(probability)*100:.2f}%")
+    st.write(type(pipe.named_steps['model']))
